@@ -9,42 +9,42 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 220 14% 15%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 220 14% 15%;
 
-    --primary: 0 0% 0%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 220 14% 15%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 210 40% 98%;
+    --accent-foreground: 220 14% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 0%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
-    /* Startup-specific design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 20%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
-    --shadow-elegant: 0 20px 40px -15px hsl(0 0% 0% / 0.1);
-    --shadow-sharp: 0 8px 32px hsl(0 0% 0% / 0.12);
+    /* University-specific design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --shadow-elegant: 0 20px 40px -15px hsl(217 91% 60% / 0.15);
+    --shadow-sharp: 0 8px 32px hsl(217 91% 60% / 0.1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --border-sharp: 2px solid hsl(0 0% 0%);
+    --border-sharp: 2px solid hsl(217 91% 60%);
 
     --sidebar-background: 0 0% 98%;
 

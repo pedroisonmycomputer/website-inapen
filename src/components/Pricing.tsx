@@ -5,63 +5,63 @@ import { CheckCircle, Star } from "lucide-react";
 const Pricing = () => {
   const plans = [
     {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for early-stage startups",
+      name: "Graduação Presencial",
+      price: "A partir de R$ 450",
+      period: "/mês",
+      description: "Experiência universitária completa",
       features: [
-        "Up to 5 team members",
-        "10GB storage",
-        "Basic analytics",
-        "Email support",
-        "API access"
+        "Aulas presenciais no campus",
+        "Acesso a laboratórios",
+        "Biblioteca física e digital",
+        "Atividades extracurriculares",
+        "Suporte acadêmico presencial"
       ],
       popular: false
     },
     {
-      name: "Growth",
-      price: "$99",
-      period: "/month",
-      description: "For scaling businesses",
+      name: "Graduação EaD",
+      price: "A partir de R$ 200",
+      period: "/mês",
+      description: "Flexibilidade para estudar",
       features: [
-        "Up to 25 team members",
-        "100GB storage",
-        "Advanced analytics",
-        "Priority support",
-        "Full API access",
-        "Custom integrations",
-        "Advanced security"
+        "Aulas 100% online",
+        "Plataforma digital avançada",
+        "Material didático incluído",
+        "Tutoria online",
+        "Provas presenciais",
+        "Diploma com mesmo valor",
+        "Estágios supervisionados"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "Custom",
+      name: "Pós-Graduação",
+      price: "Consulte",
       period: "",
-      description: "For large organizations",
+      description: "Especialização profissional",
       features: [
-        "Unlimited team members",
-        "1TB+ storage",
-        "Enterprise analytics",
-        "24/7 dedicated support",
-        "Custom API limits",
-        "White-label solution",
-        "Enterprise security",
-        "SLA guarantee"
+        "Cursos de especialização",
+        "MBA executivo",
+        "Mestrado profissional",
+        "Professores mestres e doutores",
+        "Networking empresarial",
+        "Certificação reconhecida",
+        "Flexibilidade de horários",
+        "Material exclusivo"
       ],
       popular: false
     }
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-background">
+    <section id="admissao" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Simple, Transparent Pricing
+            Modalidades de Ensino
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that fits your needs. All plans include a 14-day free trial.
+            Escolha a modalidade que melhor se adapta ao seu perfil e objetivos profissionais.
           </p>
         </div>
 
@@ -75,7 +75,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium flex items-center">
                     <Star className="h-4 w-4 mr-1" />
-                    Most Popular
+                    Mais Procurado
                   </div>
                 </div>
               )}
@@ -101,10 +101,10 @@ const Pricing = () => {
                 
                 <Button 
                   className="w-full" 
-                  variant={plan.popular ? "hero" : "startup"}
+                  variant={plan.popular ? "default" : "outline"}
                   size="lg"
                 >
-                  {plan.name === "Enterprise" ? "Contact Sales" : "Start Free Trial"}
+                  {plan.name === "Pós-Graduação" ? "Saiba Mais" : "Inscreva-se Agora"}
                 </Button>
               </CardContent>
             </Card>
@@ -113,7 +113,7 @@ const Pricing = () => {
 
         <div className="text-center mt-12">
           <p className="text-sm text-muted-foreground">
-            All plans include a 14-day free trial. No credit card required.
+            Condições especiais para pagamento à vista. Bolsas de estudo disponíveis.
           </p>
         </div>
       </div>

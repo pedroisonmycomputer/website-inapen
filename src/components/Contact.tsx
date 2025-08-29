@@ -6,14 +6,14 @@ import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-muted/50">
+    <section id="contato" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Get in Touch
+            Entre em Contato
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your startup? Let's discuss how we can help you succeed.
+            Pronto para transformar seu futuro? Vamos conversar sobre como a INAPEN pode ajudar você a alcançar seus objetivos.
           </p>
         </div>
 
@@ -21,9 +21,9 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="shadow-elegant">
             <CardHeader>
-              <CardTitle className="text-2xl">Send us a Message</CardTitle>
+              <CardTitle className="text-2xl">Envie sua Mensagem</CardTitle>
               <CardDescription>
-                Fill out the form below and we'll get back to you within 24 hours.
+                Preencha o formulário abaixo e entraremos em contato em até 24 horas.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -31,44 +31,51 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      First Name
+                      Nome
                     </label>
-                    <Input placeholder="John" />
+                    <Input placeholder="João" />
                   </div>
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      Last Name
+                      Sobrenome
                     </label>
-                    <Input placeholder="Doe" />
+                    <Input placeholder="Silva" />
                   </div>
                 </div>
                 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Email
+                    E-mail
                   </label>
-                  <Input type="email" placeholder="john@example.com" />
+                  <Input type="email" placeholder="joao@exemplo.com" />
                 </div>
                 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Company
+                    Telefone
                   </label>
-                  <Input placeholder="Your Company" />
+                  <Input placeholder="(11) 99999-9999" />
                 </div>
                 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
-                    Message
+                    Curso de Interesse
+                  </label>
+                  <Input placeholder="Qual curso te interessa?" />
+                </div>
+                
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Mensagem
                   </label>
                   <Textarea 
-                    placeholder="Tell us about your project..."
+                    placeholder="Conte-nos sobre seus objetivos acadêmicos..."
                     className="min-h-[120px]"
                   />
                 </div>
                 
-                <Button type="submit" size="lg" className="w-full" variant="hero">
-                  Send Message
+                <Button type="submit" size="lg" className="w-full">
+                  Enviar Mensagem
                 </Button>
               </form>
             </CardContent>
@@ -78,12 +85,12 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                Let's Start a Conversation
+                Vamos Iniciar uma Conversa
               </h3>
               <p className="text-muted-foreground mb-8">
-                Our team is here to help you every step of the way. Whether you have 
-                questions about our platform or need guidance on your startup journey, 
-                we're just a message away.
+                Nossa equipe está aqui para ajudá-lo a dar o próximo passo em sua 
+                carreira. Seja para esclarecer dúvidas sobre nossos cursos ou para 
+                orientação acadêmica, estamos sempre à disposição.
               </p>
             </div>
 
@@ -93,8 +100,8 @@ const Contact = () => {
                   <Mail className="h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Email Us</h4>
-                  <p className="text-muted-foreground">hello@startupco.com</p>
+                  <h4 className="font-semibold text-foreground">E-mail</h4>
+                  <p className="text-muted-foreground">contato@inapen.edu.br</p>
                 </div>
               </div>
 
@@ -103,8 +110,8 @@ const Contact = () => {
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Call Us</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <h4 className="font-semibold text-foreground">Telefone</h4>
+                  <p className="text-muted-foreground">(11) 3456-7890</p>
                 </div>
               </div>
 
@@ -113,10 +120,10 @@ const Contact = () => {
                   <MapPin className="h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Visit Us</h4>
+                  <h4 className="font-semibold text-foreground">Endereço</h4>
                   <p className="text-muted-foreground">
-                    123 Innovation Drive<br />
-                    San Francisco, CA 94105
+                    Av. Educação, 1500<br />
+                    São Paulo, SP - 01234-567
                   </p>
                 </div>
               </div>
@@ -126,20 +133,20 @@ const Contact = () => {
                   <MessageCircle className="h-6 w-6" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Live Chat</h4>
-                  <p className="text-muted-foreground">Available 24/7 for support</p>
+                  <h4 className="font-semibold text-foreground">WhatsApp</h4>
+                  <p className="text-muted-foreground">(11) 99999-8888 - Disponível 24h</p>
                 </div>
               </div>
             </div>
 
             <Card className="bg-gradient-hero text-primary-foreground">
               <CardContent className="p-6">
-                <h4 className="font-bold text-lg mb-2">Need Immediate Help?</h4>
+                <h4 className="font-bold text-lg mb-2">Precisa de Ajuda Imediata?</h4>
                 <p className="mb-4 opacity-90">
-                  Join our community of 10,000+ entrepreneurs and get instant support.
+                  Faça parte da nossa comunidade de mais de 5.000 alunos e ex-alunos.
                 </p>
                 <Button variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  Join Community
+                  Participe da Comunidade
                 </Button>
               </CardContent>
             </Card>

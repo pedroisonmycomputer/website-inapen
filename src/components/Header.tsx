@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, GraduationCap } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -10,33 +10,36 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-foreground">StartupCo</h1>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <GraduationCap className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <h1 className="text-2xl font-bold text-primary">INAPEN</h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-foreground hover:text-muted-foreground transition-colors">
-              Home
+            <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+              Início
             </a>
-            <a href="#features" className="text-foreground hover:text-muted-foreground transition-colors">
-              Features
+            <a href="#cursos" className="text-foreground hover:text-primary transition-colors font-medium">
+              Cursos
             </a>
-            <a href="#about" className="text-foreground hover:text-muted-foreground transition-colors">
-              About
+            <a href="#sobre" className="text-foreground hover:text-primary transition-colors font-medium">
+              Sobre
             </a>
-            <a href="#pricing" className="text-foreground hover:text-muted-foreground transition-colors">
-              Pricing
+            <a href="#admissao" className="text-foreground hover:text-primary transition-colors font-medium">
+              Admissão
             </a>
-            <a href="#contact" className="text-foreground hover:text-muted-foreground transition-colors">
-              Contact
+            <a href="#contato" className="text-foreground hover:text-primary transition-colors font-medium">
+              Contato
             </a>
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex space-x-4">
-            <Button variant="outline">Sign In</Button>
-            <Button variant="startup">Get Started</Button>
+            <Button variant="outline">Portal do Aluno</Button>
+            <Button>Inscreva-se</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -55,24 +58,24 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
-              <a href="#home" className="block px-3 py-2 text-foreground hover:text-muted-foreground">
-                Home
+              <a href="#home" className="block px-3 py-2 text-foreground hover:text-primary font-medium">
+                Início
               </a>
-              <a href="#features" className="block px-3 py-2 text-foreground hover:text-muted-foreground">
-                Features
+              <a href="#cursos" className="block px-3 py-2 text-foreground hover:text-primary font-medium">
+                Cursos
               </a>
-              <a href="#about" className="block px-3 py-2 text-foreground hover:text-muted-foreground">
-                About
+              <a href="#sobre" className="block px-3 py-2 text-foreground hover:text-primary font-medium">
+                Sobre
               </a>
-              <a href="#pricing" className="block px-3 py-2 text-foreground hover:text-muted-foreground">
-                Pricing
+              <a href="#admissao" className="block px-3 py-2 text-foreground hover:text-primary font-medium">
+                Admissão
               </a>
-              <a href="#contact" className="block px-3 py-2 text-foreground hover:text-muted-foreground">
-                Contact
+              <a href="#contato" className="block px-3 py-2 text-foreground hover:text-primary font-medium">
+                Contato
               </a>
               <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" className="w-full">Sign In</Button>
-                <Button variant="startup" className="w-full">Get Started</Button>
+                <Button variant="outline" className="w-full">Portal do Aluno</Button>
+                <Button className="w-full">Inscreva-se</Button>
               </div>
             </div>
           </div>
