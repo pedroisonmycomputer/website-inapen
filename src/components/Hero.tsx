@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
+  const { user } = useAuth();
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-subtle pt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,10 +22,21 @@ const Hero = () => {
               Transforme seus sonhos em realidade com os melhores cursos superiores e uma educação de excelência na INAPEN - Instituto Nacional de Pesquisa e Ensino.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="group">
-                Inscreva-se Agora
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              {user ? (
+                <Button size="lg" className="group" asChild>
+                  <Link to="/dashboard">
+                    Acessar Dashboard
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              ) : (
+                <Button size="lg" className="group" asChild>
+                  <Link to="/auth">
+                    Inscreva-se Agora
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              )}
               <Button size="lg" variant="outline" className="group">
                 <BookOpen className="mr-2 h-4 w-4" />
                 Conheça os Cursos

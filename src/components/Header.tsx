@@ -1,21 +1,27 @@
-import { Button } from "@/components/ui/button";
-import { Menu, X, GraduationCap } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, GraduationCap, User } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import caseLogo from "@/assets/case-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <GraduationCap className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <h1 className="text-2xl font-bold text-primary">INAPEN</h1>
-          </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src={caseLogo} 
+              alt="Case Education Logo" 
+              className="h-10 w-auto"
+            />
+            <h1 className="text-2xl font-bold text-primary">Case Education</h1>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
@@ -38,8 +44,23 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex space-x-4">
-            <Button variant="outline">Portal do Aluno</Button>
-            <Button>Inscreva-se</Button>
+            {user ? (
+              <Button asChild>
+                <Link to="/dashboard">
+                  <User className="w-4 h-4 mr-2" />
+                  Dashboard
+                </Link>
+              </Button>
+            ) : (
+              <>
+                <Button variant="outline" asChild>
+                  <Link to="/auth">Portal do Aluno</Link>
+                </Button>
+                <Button asChild>
+                  <Link to="/auth">Inscreva-se</Link>
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -74,8 +95,23 @@ const Header = () => {
                 Contato
               </a>
               <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" className="w-full">Portal do Aluno</Button>
-                <Button className="w-full">Inscreva-se</Button>
+                {user ? (
+                  <Button className="w-full" asChild>
+                    <Link to="/dashboard">
+                      <User className="w-4 h-4 mr-2" />
+                      Dashboard
+                    </Link>
+                  </Button>
+                ) : (
+                  <>
+                    <Button variant="outline" className="w-full" asChild>
+                      <Link to="/auth">Portal do Aluno</Link>
+                    </Button>
+                    <Button className="w-full" asChild>
+                      <Link to="/auth">Inscreva-se</Link>
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
